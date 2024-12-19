@@ -10,9 +10,13 @@ spec:
   parentRefs:
     - group: networking.tanzu.vmware.com
       kind: Entrypoint
-      name: main2
+      name: main
   rules:
     - backendRefs:
         - kind: Service
           name: greeter-messages
           port: 8080
+      matches:
+        - path:
+            type: PathPrefix
+            value: /greeting

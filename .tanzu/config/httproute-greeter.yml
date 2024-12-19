@@ -16,3 +16,7 @@ spec:
         - kind: Service
           name: greeter
           port: 8080
+      matches:
+        - path:
+            type: PathPrefix
+            value: /hello

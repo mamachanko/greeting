@@ -18,7 +18,7 @@ spec:
     - name: SPRING_PROFILES_ACTIVE
       value: development
     - name: EUREKA_INSTANCE_HOSTNAME
-      value: high-llama.tp.identity.team
+      value: smokey-possum.tp.identity.team
     - name: EUREKA_INSTANCE_NON-SECURE-PORT
       value: "80"
   acceptedServiceBindings:
@@ -53,7 +53,7 @@ metadata:
 spec:
   targets:
     - hosts:
-        - high-llama.tp.identity.team
+        - smokey-possum.tp.identity.team
       port:
         number: 80
         protocol: HTTP
