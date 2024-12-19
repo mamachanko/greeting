@@ -18,7 +18,9 @@ spec:
     - name: SPRING_PROFILES_ACTIVE
       value: development
     - name: EUREKA_INSTANCE_HOSTNAME
-      value: greeter-messages
+      value: high-llama.tp.identity.team
+    - name: EUREKA_INSTANCE_NON-SECURE-PORT
+      value: "80"
   acceptedServiceBindings:
     - name: greeter-messages-uses-service-registry
       types:
@@ -42,3 +44,16 @@ spec:
     apiGroup: apps.tanzu.vmware.com
     kind: ContainerApp
     name: greeter-messages
+
+---
+apiVersion: networking.tanzu.vmware.com/v1alpha1
+kind: EgressPoint
+metadata:
+  name: greeter-messages
+spec:
+  targets:
+    - hosts:
+        - high-llama.tp.identity.team
+      port:
+        number: 80
+        protocol: HTTP

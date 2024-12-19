@@ -18,7 +18,9 @@ spec:
     - name: SPRING_PROFILES_ACTIVE
       value: development
     - name: EUREKA_INSTANCE_HOSTNAME
-      value: greeter
+      value: smokey-possum.tp.identity.team
+    - name: EUREKA_INSTANCE_NON-SECURE-PORT
+      value: "80"
   acceptedServiceBindings:
     - name: greeter-uses-service-registry
       types:
