@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["main"],
+  "rebaseWhen": "behind-base-branch",
+  "enabledManagers": [
+    "gradle",
+    "gradle-wrapper",
+    "maven",
+    "maven-wrapper"
+  ],
+  "extends": ["config:recommended"],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "semanticCommits": "enabled",
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}
